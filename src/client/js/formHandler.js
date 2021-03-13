@@ -7,12 +7,14 @@ function handleSubmit(event) {
     Client.checkForName(formText)
 
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8081/test')
+    //https://demo.api-platform.com/top_books?page=1
+    //http://localhost:8081/test
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
     .then(res => {
         return res.json()
     })
     .then(function(data) {
-        document.getElementById('results').innerHTML = data.message
+        document.getElementById('results').innerHTML = data.title
     })
 }
 
